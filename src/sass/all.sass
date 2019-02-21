@@ -1,0 +1,974 @@
+@import 'fonts'
+@import 'normalize'
+
+
+$default-text: 'Yantramanav-Light'
+
+//Dublicate styles
+
+.default-h2
+	text-align: center
+	font-size: 30px
+	font-family: 'Nunito-Light'
+.default-p
+	text-align: center
+	font-size: 18px
+	font-family: $default-text
+
+.review-p
+	max-width: 328px
+	margin: 0 auto
+	text-align: center
+	font-family: $default-text
+	font-size: 20px
+	letter-spacing: 1px
+	line-height: 30px
+	position: relative
+	&::before
+		content: url(../img/quotes-up.png)
+		position: absolute
+		left: -10px
+		top: -45px
+	&::after
+		content: url(../img/quotes-down.png)
+		position: absolute
+		right: -15px
+		bottom: -20px
+	&+span
+		display: block
+		text-align: center
+		margin-top: 98px
+		font-family: $default-text
+		font-size: 18px
+		letter-spacing: 1px
+
+
+html,body
+	position: relative
+	height: 100%
+header
+	position: relative
+	height: 100%
+.swiper-container
+	width: 100%
+	height: 100%
+
+.swiper-slide
+	text-align: center
+	font-size: 18px
+	display: -webkit-box
+	display: -ms-flexbox
+	display: -webkit-flex
+	display: flex
+	-webkit-box-pack: center
+	-ms-flex-pack: center
+	-webkit-justify-content: center
+	justify-content: center
+	-webkit-box-align: center
+	-ms-flex-align: center
+	-webkit-align-items: center
+	align-items: center
+
+.slide1, .slide2, .slide3, .slide4, .slide5, .slide6
+	background-image: url(../img/Blue_Stool-blur.jpg)
+	background-repeat: no-repeat
+	background-position: center center
+	background-size: cover
+	position: relative
+	z-index: -10
+
+.slide1-overlay
+	position: absolute
+	background-color: rgba(0,0,0,0.25)
+	top: 0
+	left: 0
+	height: 100%
+	width: 100%
+	z-index: -5
+
+.logo
+	position: absolute
+	top: 30px
+	left: 35px
+
+.slide1-text
+	h1
+		color: #fff
+		font-size: 60px
+		font-family: 'Nunito-Light'
+		margin-bottom: 25px
+	p
+		font-size: 20px
+		font-family: $default-text
+		color: #fff
+		max-width: 570px
+		margin: 0 auto
+		text-shadow: 4px 4px 11px rgba(0, 0, 0, 1)
+
+.email
+	max-width: 477px
+	margin: 65px auto 0
+	position: relative
+input
+	border: none
+	outline: none
+	margin: 0
+	padding: 0
+	height: 47px
+	color: #8c8c8c
+	font-size: 18px
+	font-family: $default-text, sans-serif
+.email input[type="email"]
+	width: 282px
+	display: block
+	border-radius: 50px 0 0 50px
+	font-size: 18px
+	padding-left: 30px
+	margin: 0
+.email input[type="submit"]
+	width: 165px
+	border-radius: 0 50px 50px 0
+	background-color: #20ab50
+	color: #fff
+	font-size: 20px
+	font-family: 'Nunito-Regular'
+	cursor: pointer
+	position: absolute
+	right: 0
+	top: 0
+	margin: 0
+	padding: 0
+	transition: all .3s
+.email input[type="submit"]:hover
+	background-color: #2ecc71
+
+
+
+
+
+.btn-scroll a
+	// padding-top: 60px
+.btn-scroll a span
+	position: absolute
+	bottom: 15%
+	left: 50%
+	width: 46px
+	height: 46px
+	margin-left: -23px
+	border: 1px solid #fff
+	border-radius: 100%
+	box-sizing: border-box
+
+.btn-scroll a span::after
+	position: absolute
+	top: 50%
+	left: 50%
+	content: ''
+	width: 16px
+	height: 16px
+	margin: -12px 0 0 -8px
+	border-left: 1px solid #fff
+	border-bottom: 1px solid #fff
+	-webkit-transform: rotate(-45deg)
+	transform: rotate(-45deg)
+	box-sizing: border-box
+
+.btn-scroll a span::before
+	position: absolute
+	top: 0
+	left: 0
+	z-index: -1
+	content: ''
+	width: 44px
+	height: 44px
+	box-shadow: 0 0 0 0 rgba(255,255,255,.1)
+	border-radius: 100%
+	opacity: 0
+	-webkit-animation: sdb03 3s infinite
+	animation: sdb03 3s infinite
+	box-sizing: border-box
+
+@-webkit-keyframes sdb03
+	0%
+		opacity: 0
+	30%
+		opacity: 1
+	60%
+		box-shadow: 0 0 0 60px rgba(255,255,255,.1)
+		opacity: 0
+	100% 
+		opacity: 0
+
+@keyframes sdb03 
+	0%
+		opacity: 0
+	30%
+		opacity: 1
+	60%
+		box-shadow: 0 0 0 60px rgba(255,255,255,.1)
+		opacity: 0
+	100%
+		opacity: 0
+
+
+
+
+
+
+
+
+.about, .review1, .review2
+	max-width: calc(1280px - 30px)
+	padding: 0 15px
+	margin: 0 auto
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	>div
+		flex-basis: 50%
+
+.about-text
+	max-width: 405px
+	margin: 0 auto
+	h2
+		@extend .default-h2
+		margin-bottom: 30px
+	p
+		font-size: 16px
+		font-family: $default-text
+		line-height: 24px
+		letter-spacing: 0.7px
+		margin: 25px 0
+		text-align: left
+.about-img
+	img
+		display: block
+		width: 100%
+
+.review1-text
+	max-width: 346px
+	margin: 0 auto
+	h2
+		@extend .default-h2
+		margin-bottom: 120px
+.review1-img
+	img
+		display: block
+		width: 100%
+
+.review2-text
+	p
+		max-width: 300px
+	p::before
+		left: -30px
+	p::after
+		right: -25px
+.review2-img
+	img
+		display: block
+		width: 100%
+
+.range
+	position: relative
+	padding: 80px 0 70px
+	h2
+		@extend .default-h2
+		margin: 10px 0 0
+	p
+		@extend .default-p
+		margin-bottom: 0
+.range-slider
+	width: 54%
+.range-slide
+	position: relative
+	width: 100%
+	>div
+		height: 600px
+	img
+		display: block
+		max-width: 100%
+		margin: 0 auto
+	span
+		display: block
+		text-transform: uppercase
+		text-align: center
+		position: absolute
+		bottom: 60px
+		font-family: 'Nunito-Light'
+		font-weight: 600
+		font-size: 24px
+		color: #000
+.swiper-pagination
+	font-family: $default-text
+
+.advantages
+	background-image: linear-gradient(to bottom, #e9e9e9, #ebebeb, #ededed, #efefef, #f1f1f1)
+	padding: 50px 0 30px
+	h2
+		@extend .default-h2
+		margin-bottom: 15px
+	>p
+		@extend  .default-p
+.adv-wrapper
+	display: flex
+	justify-content: space-between
+	max-width: calc(1280px - 120px)
+	padding: 0 60px
+	margin: 0 auto
+	background-image: url(../img/Kids_Shoes.png)
+	background-repeat: no-repeat
+	background-position: center center
+.adv-left-side
+	margin-top: -10px
+.adv-right-side
+	padding-top: 10px
+.adv-card
+	background-color: #fff
+	max-width: calc(230px - 30px)
+	padding: 14px
+	border-radius: 10px
+	margin-bottom: 8px
+	position: relative
+	span
+		display: block
+		font-family: 'Yantramanav-Regular'
+		font-weight: 600
+		font-size: 16px
+	p
+		font-family: $default-text
+		font-size: 15px
+		margin: 0
+		line-height: 1.5
+		
+.card-line
+	background-color: #fff
+	position: absolute
+.card-line::before
+	content: ''
+	display: block
+	position: absolute
+	height: 1px
+	background-color: #fff
+.card-line::after
+	content: ''
+	display: block
+	height: 15px
+	width: 15px
+	border-radius: 50px
+	position: absolute
+	left: -11px
+	bottom: -19px
+	background-color: #fff
+	border: 4px solid rgba(0, 0, 0, 0.2)
+
+.line1
+	height: 100px
+	width: 1px
+	left: 128%
+	top: 49px
+.line1::before
+	right: 0
+	width: 65px
+.line2
+	height: 1px
+	width: 69px
+	left: 100%
+	top: 120px
+.line2::after
+	left: 100%
+	top: -11px
+.line3
+	height: 1px
+	width: 81px
+	left: 100%
+	top: 47px
+.line3::after
+	left: 100%
+	top: -11px
+.line4
+	height: 50px
+	width: 1px
+	left: 200%
+	top: 15px
+.line4::before
+	bottom: 0
+	right: 0
+	width: 230px
+.line4::after
+	top: -19px
+.line5
+	height: 90px
+	width: 1px
+	left: -153%
+	top: 33px
+.line5::before
+	left: 0
+	width: 350px
+.line6
+	height: 103px
+	width: 1px
+	left: -128%
+	top: 33px
+.line6::before
+	left: 0
+	width: 292px
+.line7
+	height: 1px
+	width: 115px
+	left: -50%
+	top: 35px
+.line7::after
+	top: -11px
+.line8
+	height: 47px
+	width: 1px
+	left: -90%
+	top: 15px
+.line8::before
+	left: 0
+	bottom: 0
+	width: 205px
+.line8::after
+	top: -19px
+.line9
+	height: 1px
+	width: 378px
+	left: -165%
+	top: 20px
+.line9::after
+	top: -11px
+
+
+
+
+.data-address
+	padding: 68px 0 80px
+	h2
+		@extend .default-h2
+		margin-bottom: 15px
+	p
+		@extend .default-p
+.data-list
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	max-width: calc(1060px - 60px)
+	padding: 0 30px
+	margin: 60px auto 0
+	div
+		flex-basis: 19%
+		padding-right: 10px
+	ul
+		padding: 0
+		margin-bottom: 35px
+	li
+		list-style-type: none
+		font-family: $default-text
+		line-height: 1.4
+	li:first-child
+		font-family: 'Yantramanav-Regular'
+		font-weight: 600
+	li:last-child
+		margin-top: 8px
+	a
+		text-decoration: none
+		color: #1faa50
+.contacts-wrap
+	margin-top: 60px
+	h2
+		font-size: 24px
+.contacts
+	max-width: 350px
+	margin: 40px auto 0
+	display: flex
+	justify-content: space-between
+	a
+		text-decoration: none
+		font-family: $default-text
+		font-size: 18px
+	a:first-child
+		color: #1faa50	
+	a:last-child
+		color: #000
+
+
+.up-footer
+	background-color: #f3f3f3
+	padding: 110px 0 115px
+	h1
+		font-family: 'Nunito-Light'
+		text-align: center
+		font-size: 30px
+		margin-bottom: 0
+	p
+		font-family: $default-text
+		font-weight: 600
+		font-size: 22px
+		text-align: center
+		margin-top: 10px
+.email-bottom
+	margin-top: 47px
+	input[type="email"]
+		padding-left: 42px
+
+.low-footer
+	background-color: #dcdcdc
+	padding: 1px 0 1px 30px
+	p
+		color: #fff
+		font-family: 'Yantramanav-Regular'
+		margin: 8px 0
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1200px)
+	.slide1-text
+		h1
+			font-size: 55px
+		p
+			font-size: 19px
+	.email
+		max-width: 450px
+		margin-top: 50px
+		input[type=email]
+			width: 255px
+	.swiper-container-vertical > .swiper-pagination-bullets
+		right: 40px
+	
+	.about-text
+		h2
+			margin-bottom: 20px
+		p
+			font-size: 15px
+			margin: 13px 0
+	.review1-text
+		h2
+			margin-bottom: 100px
+		p
+			font-size: 19px
+		span
+			margin-top: 90px
+	.review2-text
+		p
+			font-size: 19px
+		span
+			margin-top: 90px
+	
+	.range
+		padding: 70px 0 60px
+	.data-address
+		padding: 45px 0 60px
+	.up-footer
+		padding: 80px 0 90px
+	
+	.advantages
+		padding: 15px 0
+	.adv-wrapper
+		background-size: contain
+		background-position: 70% center
+		max-width: 950px
+		margin: 0 auto
+		padding: 0 10px
+	.adv-card
+		margin-bottom: 5px
+		padding: 5px
+	.line1
+		left: 147%
+		top: 42px
+	.line1::before
+		width: 100px
+	.line2
+		width: 105px
+	.line3
+		width: 112px
+	.line4
+		left: 209%
+	.line5
+		left: -110%
+		top: 27px
+	.line5::before
+		width: 232px
+	.line6
+		left: -72%
+	.line6::before
+		width: 150px
+	.line7
+		width: 34px
+    left: -16%
+    top: 52px
+	.line8
+    left: -40%
+    top: 28px
+	.line8::before
+		width: 85px
+	.line9 
+    width: 259px
+    left: -123%
+
+@media only screen and (max-width: 992px)
+	.default-h2
+		font-size: 28px
+	.about
+		>div
+			flex-basis: 100%
+	.about-text
+		max-width: 496px
+		h2
+			margin-bottom: 10px
+		p
+			font-size: 17px
+			margin: 14px 0
+			text-align: center
+	.about-img
+		margin: 15px 0
+		img
+			display: block
+			max-width: 60%
+			margin: 0 auto
+	.review1-text
+		h2
+			margin-bottom: 50px
+		p
+			font-size: 18px
+		span
+			margin-top: 60px
+	.review-p
+		&::before
+			left: -5px
+			top: -23px
+		&::after
+			right: -5px
+			bottom: -23px
+	.review2-text
+		p
+			font-size: 18px
+		p::before
+			left: -5px
+		p::after
+			right: -5px
+		span
+			margin-top: 60px
+	
+	.range
+		padding: 40px 0 30px
+	.range-slider
+		width: 80%
+	.range-slide
+		>div
+			height: 560px
+		span
+			bottom: 45px
+
+
+	.adv-wrapper
+		background-position: 53% center
+		max-width: 730px
+		margin: 0 auto
+		padding: 0 10px
+	.adv-card
+		max-width: 150px
+		span
+			font-size: 14px
+		p
+			line-height: 1
+			font-size: 13px
+			margin: 2px
+			margin-bottom: 0
+	.card-line::after
+		left: -9px
+		bottom: -18px
+		width: 11px
+		height: 11px
+		border: 4px solid rgba(0,0,0,.2)
+	.line1
+		left: 110%
+		top: 50px
+		height: 65px
+	.line1::before
+		width: 36px
+	.line2
+		width: 23px
+		top: 91px
+	.line2::after
+		left: 100%
+		top: -10px
+	.line3
+		width: 30px
+		top: 30px
+	.line3::after
+		left: 100%
+		top: -10px
+	.line4
+		left: 187%
+	.line4::before
+		width: 140px
+	.line5
+		left: -119%
+		top: 26px
+		height: 70px	
+	.line5::before
+		width: 191px
+	.line6
+		left: -102%
+		height: 72px
+		top: 33px
+	.line6::before
+		width: 164px
+	.line7
+		width: 37px
+		left: -20%
+		top: 55px
+	.line7::after
+		top: -10px
+	.line8
+		left: -65%	
+    top: 30px
+    height: 25px
+	.line8::before
+		width: 104px
+	.line9
+		width: 220px
+		left: -137%
+		top: 22px
+	
+	.data-address
+		padding: 30px 0
+	.data-list
+		margin: 0 auto
+		font-size: 15px
+		ul
+			margin-bottom: 12px
+	.contacts-wrap
+		margin-top: 30px
+	.up-footer
+		padding: 30px 0 50px
+
+@media only screen and (max-width: 768px)
+	.default-h2
+		font-size: 28px
+
+	.slide1-text
+		h1
+			font-size: 50px
+		p
+			font-size: 18px
+			max-width: 420px
+	.email
+		max-width: 100%
+		margin-top: 30px
+		input
+			height: 40px
+			font-size: 18px
+		
+		input[type=email]
+			width: 255px
+			padding-left: 20px		
+		input[type=submit]
+			width: 145px
+
+	.swiper-container-vertical > .swiper-pagination-bullets
+		right: 30px
+
+	.about, .review1, .review2
+		padding: 0
+	.about
+		>div
+			flex-basis: 100%
+	.about-text
+		max-width: 496px
+		h2
+			margin-bottom: 10px
+		p
+			font-size: 16px
+			margin: 12px 0
+			text-align: center
+	.about-img
+		margin: 0
+		img
+			max-width: 75%
+			margin: 0 auto
+	.review1
+		flex-direction: column-reverse
+		>div
+			flex-basis: 100%
+	.review1-text
+		max-width: 100%
+		h2
+			margin-bottom: 30px
+		p
+			font-size: 17px
+		span
+			margin-top: 35px
+	.review-p
+		max-width: 340px
+		line-height: 26px
+		&::before
+			left: -5px
+			top: -23px
+		&::after
+			right: -5px
+			bottom: -23px
+	.review1-img
+		margin: 10px 0
+		img
+			max-width: 75%
+			margin: 0 auto
+	.review2
+		flex-direction: column
+		>div
+			flex-basis: 100%
+	.review2-text
+		max-width: 100%
+		margin-top: 30px
+		p
+			max-width: 340px
+			font-size: 17px
+		p::before
+			left: -5px
+		p::after
+			right: -5px
+		span
+			margin-top: 35px
+	.review2-img
+		margin: 10px 0
+		img
+			max-width: 75%
+			margin: 0 auto
+	
+	.range
+		padding: 30px 0 10px
+	.range-slider
+		width: 90%
+	.range-slide
+		>div
+			height: 440px
+		span
+			font-size: 22px
+			bottom: 40px
+		img
+			max-width: 80%
+
+	.adv-wrapper
+		background-image: none
+		span
+			margin: 5px 0
+		p
+			margin: 4px
+	.adv-left-side
+		display: flex
+		flex-direction: column
+		flex-basis: 50%
+		justify-content: center
+		align-items: center
+		margin: 0
+	.adv-right-side
+		padding: 0
+		display: flex
+		flex-direction: column-reverse
+		flex-basis: 50%
+		justify-content: center
+		align-items: center
+	.adv-card
+		text-align: center
+		max-width: 60%
+		padding: 0 20px
+		margin-bottom: 8px
+	.card-line
+		display: none
+
+
+	.up-footer
+		padding: 10px 0 30px
+		h1
+			font-size: 25px
+		p
+			font-size: 18px
+	.email-bottom
+		max-width: 420px
+		input
+			height: 40px
+			font-size: 18px
+		input[type=email]
+			width: 255px
+			padding-left: 20px		
+		input[type=submit]
+			width: 145px
+
+
+@media only screen and (max-width: 420px)
+	.logo
+		left: 50%
+		transform: translateX(-50%)
+	.default-h2
+		font-size: 25px
+	.default-p
+		font-size: 16px
+
+	.slide1-text
+		h1
+			font-size: 30px
+		p
+			font-size: 16px
+			max-width: 300px
+	.email
+		max-width: 100%
+		margin-top: 20px
+		input
+			height: 36px
+			font-size: 15px
+		input[type=email]
+			width: 190px
+			padding-left: 10px		
+		input[type=submit]
+			width: 100px
+			font-size: 16px
+	.swiper-container-vertical > .swiper-pagination-bullets
+		right: 20px
+
+	.about-img, .review1-img, .review2-img
+		img
+			max-width: 85%
+
+	.range
+		padding: 30px 0 10px
+	.range-slider
+		width: 100%
+	.range-slide
+		>div
+			height: 380px
+		span
+			font-size: 19px
+			bottom: 32px
+		img
+			max-width: 70%
+
+	.adv-wrapper
+		flex-direction: column
+	.adv-left-side
+		flex-basis: 100%
+	.adv-right-side
+		flex-basis: 100%
+	.adv-card
+		max-width: 80%
+	
+	.data-address
+		padding: 0 0 10px
+	.data-list
+		font-size: 10px
+	.contacts
+		max-width: 300px
+		margin-top: 20px
+
+	.email-bottom
+		max-width: 300px
+		input[type=email]
+			width: 190px
+			padding-left: 10px				
+		input[type=submit]
+			width: 100px
